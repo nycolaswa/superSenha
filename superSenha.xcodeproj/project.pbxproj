@@ -16,6 +16,9 @@
 		35148ABF2C44979F006F50F1 /* superSenhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35148ABE2C44979F006F50F1 /* superSenhaTests.swift */; };
 		35148AC92C44979F006F50F1 /* superSenhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35148AC82C44979F006F50F1 /* superSenhaUITests.swift */; };
 		35148ACB2C44979F006F50F1 /* superSenhaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35148ACA2C44979F006F50F1 /* superSenhaUITestsLaunchTests.swift */; };
+		35B8F4472C488B9C0011FF0F /* PasswordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8F4462C488B9C0011FF0F /* PasswordsViewController.swift */; };
+		35B8F4492C488E230011FF0F /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8F4482C488E230011FF0F /* SecurityViewController.swift */; };
+		35B8F44B2C488F810011FF0F /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B8F44A2C488F810011FF0F /* PasswordGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		35148AC42C44979F006F50F1 /* superSenhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = superSenhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35148AC82C44979F006F50F1 /* superSenhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superSenhaUITests.swift; sourceTree = "<group>"; };
 		35148ACA2C44979F006F50F1 /* superSenhaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = superSenhaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35B8F4462C488B9C0011FF0F /* PasswordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordsViewController.swift; sourceTree = "<group>"; };
+		35B8F4482C488E230011FF0F /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
+		35B8F44A2C488F810011FF0F /* PasswordGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				35148AA92C44979A006F50F1 /* SceneDelegate.swift */,
 				35148AAB2C44979A006F50F1 /* ViewController.swift */,
 				35148AAD2C44979A006F50F1 /* Main.storyboard */,
+				35B8F44A2C488F810011FF0F /* PasswordGenerator.swift */,
+				35B8F4482C488E230011FF0F /* SecurityViewController.swift */,
+				35B8F4462C488B9C0011FF0F /* PasswordsViewController.swift */,
 				35148AB02C44979E006F50F1 /* Assets.xcassets */,
 				35148AB22C44979E006F50F1 /* LaunchScreen.storyboard */,
 				35148AB52C44979E006F50F1 /* Info.plist */,
@@ -259,7 +268,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35148AAC2C44979A006F50F1 /* ViewController.swift in Sources */,
+				35B8F4472C488B9C0011FF0F /* PasswordsViewController.swift in Sources */,
+				35B8F44B2C488F810011FF0F /* PasswordGenerator.swift in Sources */,
 				35148AA82C44979A006F50F1 /* AppDelegate.swift in Sources */,
+				35B8F4492C488E230011FF0F /* SecurityViewController.swift in Sources */,
 				35148AAA2C44979A006F50F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,8 +455,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +464,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nycolaswilliam.app.superSenha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -471,8 +486,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +495,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nycolaswilliam.app.superSenha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
